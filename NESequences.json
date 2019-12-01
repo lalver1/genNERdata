@@ -1,0 +1,66 @@
+{
+    "ne-sequences": [
+        {"ne-sequence": [{
+            "num": 0,
+            "label": null, 
+            "value": ["Deceased: "],
+            "p": [1]
+            },
+            {
+            "num": 1,
+            "label": "firstname", 
+            "value": "fake.first_name()",        
+            "p": null
+            },
+            {
+            "num": 2,
+            "label": null, 
+            "value": [" ", "  "],        
+            "p": [0.95,0.05]
+            },
+            {
+            "num": 3,
+            "label": "lastname", 
+            "value": "fake.last_name()",        
+            "p": null
+            },
+            {
+            "num": 4,
+            "label": null,
+            "value": [", "," ,",","," , "], 
+            "p": [0.9,0.04,0.04,0.02]
+            },
+            {
+            "num": 5,
+            "label": "ethnicity",
+            "value": ["Asian","Black","Eastern","Hispanic","White","Other"," "], 
+            "p": [0.16,0.16,0.16,0.16,0.16,0.16,0.04]
+            }]
+        },
+        {"ne-sequence": [{
+            "num": 0,
+            "label": null, 
+            "value": ["Household: "],
+            "p": [1]
+            },
+            {
+            "num": 1,
+            "label": "lastname", 
+            "value": "fake.last_name()",        
+            "p": null
+            },
+            {
+            "num": 2,
+            "label": null,
+            "value": [", "," ,",","," , "], 
+            "p": [0.9,0.04,0.04,0.02]
+            },
+            {
+            "num": 3,
+            "label": "householdtype", 
+            "value": ["family","non-family"],        
+            "p": [0.5,0.5]
+            }]
+        }
+    ]
+}
