@@ -57,7 +57,10 @@ def gen_data(sequence,N):
         entities = []    
         for (offset, s) in enumerate(sequence):    
                 if s['p'] is None:
-                    value = eval(s['value'])                
+                    try:
+                        value = eval(s['value'])
+                    except:
+                        value = s['value']            
                 else:
                     value = random.choice(s['value'], 1, p=s['p']).item(0)                
                 if offset == 0:
@@ -74,7 +77,7 @@ def gen_data(sequence,N):
     return train_data
 
 
-sequences = load_sequences('NESequence.json')
+sequences = load_sequences('NESequences.json')
 training_data = []
 for (offset, seq) in enumerate(sequences['ne-sequences']):
     training_data.append(gen_data(seq['ne-sequence'],5))

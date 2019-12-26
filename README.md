@@ -3,4 +3,7 @@
 
 genNERdata accepts JSON files defining templates for Named Entity (NE) 
 sequences and generates an annotated list of tuples. An example is shown below:
+
+`$ python gennerdata.py NESequences.json`
+
  

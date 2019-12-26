@@ -3,8 +3,8 @@
         {"ne-sequence": [{
             "num": 0,
             "label": null, 
-            "value": ["Deceased: "],
-            "p": [1]
+            "value": "Deceased: ",
+            "p": null
             },
             {
             "num": 1,
@@ -40,8 +40,8 @@
         {"ne-sequence": [{
             "num": 0,
             "label": null, 
-            "value": ["Household: "],
-            "p": [1]
+            "value": "Household: ",
+            "p": null
             },
             {
             "num": 1,
