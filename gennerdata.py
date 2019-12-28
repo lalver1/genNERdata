@@ -7,8 +7,7 @@ from dataclasses import dataclass
 from numpy import random
 from faker import Faker
 import json
-
-fake = Faker()
+import sys
 
 def load_sequences(filename):
     """Load JSON NE sequences.
@@ -52,6 +51,7 @@ def gen_data(sequence,N):
     :rtype: List of tuples
     """
 
+    fake = Faker()
     train_data =[]
     for _ in range(N):
         entities = []    
@@ -76,11 +76,18 @@ def gen_data(sequence,N):
     
     return train_data
 
+def main():
+    """Entry point.
 
-sequences = load_sequences('NESequences.json')
-training_data = []
-for (offset, seq) in enumerate(sequences['ne-sequences']):
-    training_data.append(gen_data(seq['ne-sequence'],5))
+    """
+        
+    sequences = load_sequences(sys.argv[1])
+    training_data = []
+    for (offset, seq) in enumerate(sequences['ne-sequences']):
+        training_data.append(gen_data(seq['ne-sequence'],5))
+    for (offset, seq) in enumerate(sequences['ne-sequences']):
+        print(training_data[offset])
+    
 
-print(training_data[0])
-print(training_data[1])
+if __name__ == "__main__":
+    main()
